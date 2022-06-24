@@ -4,6 +4,7 @@ html{
 header{
     width: 100%;
     height: 5rem;
+    background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(100, 255, 0));
     background-color: rgba(0, 0, 190, 0.685);
     display: flex;
     flex-direction: row;
@@ -33,12 +34,35 @@ nav ul li{
 }
 
 nav ul li a{
-    color:rgb(100, 255, 0);
+    color:rgba(0, 0, 190, 0.685);
 }
 
 h1 {
     color: rgb(100, 255, 0);
     font-family: 'Roboto', sans-serif;
+    animation-name: titulo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes titulo{
+    0%{
+        background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(255, 255, 255) 100%,rgba(0, 0, 190, 0.685));
+    }
+    20%{
+        background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(255, 255, 255) 80%,rgba(0, 0, 190, 0.685));
+    }
+    40%{
+        background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(255, 255, 255) 60%,rgba(0, 0, 190, 0.685));
+    }
+    60%{
+        background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(255, 255, 255) 40%,rgba(0, 0, 190, 0.685));
+    }
+    80%{
+        background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(255, 255, 255) 20%,rgba(0, 0, 190, 0.685));
+    }
+    100%{
+        background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(255, 255, 255) 0%,rgba(0, 0, 190, 0.685));
+    }
 }
 h2 {
     display: flex;
@@ -53,6 +77,10 @@ h2 {
     border-color: lightgreen blue lightgreen blue;
     text-decoration-color: black;
     background-color: grey;
+    transition:background-image 500ms;
+}
+.comprar:hover{
+    background-image: linear-gradient(to right,rgba(0, 0, 190, 0.685), rgb(100, 255, 0));
 }
 .centrar{
     display: flex;
